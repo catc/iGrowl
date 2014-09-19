@@ -4,7 +4,7 @@
 	src:url('../fonts/feather/igrowl-feather.eot?#iefixqzy2jf') format('embedded-opentype'),
 		url('../fonts/feather/igrowl-feather.woff?qzy2jf') format('woff'),
 		url('../fonts/feather/igrowl-feather.ttf') format('truetype'),
-		url('../fonts/feather/igrowl-feather.svg?qzy2jf#igrowl-feather') format('svg');
+		url('/fonts/feather/igrowl-feather.svg?qzy2jf#igrowl-feather') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
