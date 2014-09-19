@@ -26,7 +26,7 @@ $.iGrowl({
   // other options
 })
 ```
-For a full list of properties and methods, demos and examples, see [iGrowl](http://catc.github.io/iGrowl/).
+For a full list of properties and methods, demos and examples, see [iGrowl](http://catc.github.io/iGrowl/) official documentation.
 
 ## Features to come
 Features I plan on adding:
