@@ -964,10 +964,10 @@ label, p {
 
 h2 {
   font-size: 2.4rem;
-  border-bottom: 2px solid #ffd900;
+  border-bottom: 2px solid #ffb800;
   font-weight: 700;
   font-style: italic;
-  color: #00ccd6;
+  color: #0aade0;
   color: #666666;
   margin-top: 45px;
 }
@@ -1057,7 +1057,7 @@ p a:hover, #installation a:hover {
   padding-left: 18px;
 }
 #sidebar .nav > .active:not(.sub), #sidebar .sub .active, #sidebar li:not(.sub):hover {
-  background: #00ccd6;
+  background: #0aade0;
 }
 #sidebar .nav > .active:not(.sub) a, #sidebar .sub .active a, #sidebar li:not(.sub):hover a {
   color: white;
@@ -1083,11 +1083,11 @@ p a:hover, #installation a:hover {
   margin-right: 16px;
   border: 1px solid #dddddd;
   border-radius: 3px;
-  background: #00ccd6;
-  border: 1px solid #009ba3;
+  background: #0aade0;
+  border: 1px solid #0887af;
 }
 #ss-download div:hover {
-  background: #00c2cc;
+  background: #0aa5d6;
 }
 #ss-download div:active {
   box-shadow: inset 0 2px 1px 0px rgba(0, 0, 0, 0.2);
@@ -1142,7 +1142,7 @@ p a:hover, #installation a:hover {
   width: calc(100% - 100px);
 }
 .demo input:focus {
-  border-color: #00ccd6;
+  border-color: #0aade0;
 }
 .demo button {
   margin-top: 40px;
@@ -1226,11 +1226,11 @@ p a:hover, #installation a:hover {
   border: 2px solid transparent;
 }
 .icons span:hover {
-  color: #00ccd6;
+  color: #0aade0;
 }
 .icons span.active {
   border-color: #efefef;
-  color: #00ccd6;
+  color: #0aade0;
 }
 
 .placement > span {
@@ -1260,13 +1260,13 @@ p a:hover, #installation a:hover {
   visibility: hidden;
 }
 .placement label input:checked + span {
-  color: #00ccd6;
+  color: #0aade0;
 }
 .placement label span {
   transition: color 0.2s ease;
 }
 .placement label:hover span {
-  color: #00ccd6;
+  color: #0aade0;
 }
 
 /* = Rest
@@ -1322,7 +1322,7 @@ table tr:nth-child(2n+1) {
 }
 
 .btn {
-  background: #00ccd6;
+  background: #0aade0;
   display: block;
   color: white;
   text-shadow: 0 1px 0 #424242;
@@ -1333,11 +1333,11 @@ table tr:nth-child(2n+1) {
   padding: 12px 0;
   text-align: center;
   border-radius: 3px;
-  border: 1px solid #009ba3;
+  border: 1px solid #0887af;
   transition: background 0.3s ease;
 }
 .btn:hover {
-  background: #00bdc7;
+  background: #09a2d1;
 }
 .btn:active {
   box-shadow: inset 0 2px 1px 0px rgba(0, 0, 0, 0.2);
@@ -1410,7 +1410,7 @@ table tr:nth-child(2n+1) {
   z-index: 9999;
 }
 .selectricOpen .selectric {
-  border-color: #00ccd6;
+  border-color: #0aade0;
 }
 
 .selectricOpen .selectricItems {
@@ -1510,11 +1510,11 @@ table tr:nth-child(2n+1) {
 
 .selectricItems li:hover {
   color: white;
-  background: #00ccd6;
+  background: #0aade0;
 }
 
 .selectricItems li.disabled {
   background: white;
-  color: #00ccd6;
+  color: #0aade0;
   cursor: default;
 }
