@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'igrowl-linecons';
-	src:url('./fonts/linecons/igrowl-linecons.eot?-d5tr08');
-	src:url('./fonts/linecons/igrowl-linecons.eot?#iefix-d5tr08') format('embedded-opentype'),
-		url('./fonts/linecons/igrowl-linecons.woff?-d5tr08') format('woff'),
-		url('./fonts/linecons/igrowl-linecons.ttf?-d5tr08') format('truetype'),
-		url('./fonts/linecons/igrowl-linecons.svg?-d5tr08#igrowl-linecons') format('svg');
+	src:url('../../fonts/linecons/igrowl-linecons.eot?-d5tr08');
+	src:url('../../fonts/linecons/igrowl-linecons.eot?#iefix-d5tr08') format('embedded-opentype'),
+		url('../../fonts/linecons/igrowl-linecons.woff?-d5tr08') format('woff'),
+		url('../../fonts/linecons/igrowl-linecons.ttf?-d5tr08') format('truetype'),
+		url('../../fonts/linecons/igrowl-linecons.svg?-d5tr08#igrowl-linecons') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
