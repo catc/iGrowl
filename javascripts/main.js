@@ -1,5 +1,5 @@
 function displayIcons(pack, ind){
-	return $.getJSON('/fonts/' + pack + '/selection.json').then(function(data){
+	return $.getJSON('fonts/' + pack + '/selection.json').then(function(data){
 		// console.log( 'data is: ', data )
 
 		var section = $('#icons').append('<section class="'+pack+'"><div class="icons"></div></section>').find('section.'+pack+' div')
@@ -78,7 +78,7 @@ $('.demo').on('submit', function(e){
 $('#d-small, #d-type, #d-animation').selectric()
 
 // load animations from json
-$.getJSON('/javascripts/animate.json').then(function(data){
+$.getJSON('javascripts/animate.json').then(function(data){
 	var onshow = $('#d-animshow'),
 		onhide = $('#d-animhide')
 
