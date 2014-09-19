@@ -951,6 +951,7 @@ div[class^="col_"]:first-of-type {
 /* ====================================================== */
 body {
   overflow: hidden;
+  margin-bottom: 30px;
 }
 
 h1 {
