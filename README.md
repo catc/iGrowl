@@ -15,6 +15,7 @@ iGrowl has 3 dependencies:
   * [Feather](http://colebemis.com/feather/) by [Cole Bemis](http://colebemis.com/)
   * [Steadysets](https://dribbble.com/shots/929153-Steady-set-of-icons) by [Tommy Sähl](http://tommysahl.com/)
   * [Linecons](http://designmodo.com/linecons-free/) by [Sergey Shmidt](http://shmidt.in/)
+
 All icon packs have been compiled using [Icomoon](https://icomoon.io/) app
 
 ## Usage
@@ -25,7 +26,7 @@ $.iGrowl({
   // other options
 })
 ```
-For a full list of properties and methods, demos and examples, see  [iGrowl](http://catc.github.io/iGrowl/).
+For a full list of properties and methods, demos and examples, see [iGrowl](http://catc.github.io/iGrowl/).
 
 ## Features to come
 Features I plan on adding:
@@ -33,7 +34,7 @@ Features I plan on adding:
 * more styles + options to customize styles
 
 ## License
-iGrowl is licensed under the MIT license. (http://opensource.org/licenses/MIT)
+iGrowl is licensed under the MIT license (http://opensource.org/licenses/MIT).
 
 ## Contributing
 If you find any bugs, have feature requests, or would like to contribute - either send me a pull request or open a ticket and I'll do my best to address it.
