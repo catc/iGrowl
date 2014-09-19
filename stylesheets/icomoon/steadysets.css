@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'igrowl-steadysets';
-	src:url('../fonts/steadysets/igrowl-steadysets.eot?-9heocm');
-	src:url('../fonts/steadysets/igrowl-steadysets.eot?#iefix-9heocm') format('embedded-opentype'),
-		url('../fonts/steadysets/igrowl-steadysets.woff?-9heocm') format('woff'),
-		url('../fonts/steadysets/igrowl-steadysets.ttf?-9heocm') format('truetype'),
-		url('../fonts/steadysets/igrowl-steadysets.svg?-9heocm#igrowl-steadysets') format('svg');
+	src:url('./fonts/steadysets/igrowl-steadysets.eot?-9heocm');
+	src:url('./fonts/steadysets/igrowl-steadysets.eot?#iefix-9heocm') format('embedded-opentype'),
+		url('./fonts/steadysets/igrowl-steadysets.woff?-9heocm') format('woff'),
+		url('./fonts/steadysets/igrowl-steadysets.ttf?-9heocm') format('truetype'),
+		url('./fonts/steadysets/igrowl-steadysets.svg?-9heocm#igrowl-steadysets') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }

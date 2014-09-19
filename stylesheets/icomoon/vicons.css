@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'igrowl-vicons';
-	src:url('../fonts/vicons/igrowl-vicons.eot?-6v25y5');
-	src:url('../fonts/vicons/igrowl-vicons.eot?#iefix-6v25y5') format('embedded-opentype'),
-		url('../fonts/vicons/igrowl-vicons.woff?-6v25y5') format('woff'),
-		url('../fonts/vicons/igrowl-vicons.ttf?-6v25y5') format('truetype'),
-		url('../fonts/vicons/igrowl-vicons.svg?-6v25y5#igrowl-vicons') format('svg');
+	src:url('./fonts/vicons/igrowl-vicons.eot?-6v25y5');
+	src:url('./fonts/vicons/igrowl-vicons.eot?#iefix-6v25y5') format('embedded-opentype'),
+		url('./fonts/vicons/igrowl-vicons.woff?-6v25y5') format('woff'),
+		url('./fonts/vicons/igrowl-vicons.ttf?-6v25y5') format('truetype'),
+		url('./fonts/vicons/igrowl-vicons.svg?-6v25y5#igrowl-vicons') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
