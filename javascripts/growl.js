@@ -10,10 +10,9 @@
 
 
 	var iGrowl = function(options){
-		// console.log( 'options coming in are: ', options )
 		var options = $.extend(true, {}, $.iGrowl.prototype.defaults, options)
 		this.options = options
-		console.log( 'options are now; ', this.options, options )
+		
 		this.template = setContent(options)
 
 		render.call(this)
@@ -63,13 +62,6 @@
 
 		// horizontal alignment
 		options.placement.x === "center" ? template.addClass('igrowl-center') : template.css( options.placement.x, options.offset.x )
-		/*
-		if ( options.placement.x === "center" ){
-			// template.css({ left: '50%', 'margin-left': -( template.outerWidth() / 2 )  })
-			template.addClass('igrowl-center')
-		} else {
-			template.css( options.placement.x, options.offset.x ) 
-		}*/
 
 		$('body').append(template)
 

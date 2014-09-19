@@ -1,12 +1,3 @@
-function startcb(){
-	console.log( 'STARTINNNNNNNNNG' )
-}
-
-function endcb(){
-	console.log( 'DONEEEEEEE' )
-}
-
-
 function displayIcons(pack, ind){
 	return $.getJSON('/fonts/' + pack + '/selection.json').then(function(data){
 		// console.log( 'data is: ', data )
@@ -86,6 +77,7 @@ $('.demo').on('submit', function(e){
 // enable <select> styling 
 $('#d-small, #d-type, #d-animation').selectric()
 
+// load animations from json
 $.getJSON('/javascripts/animate.json').then(function(data){
 	var onshow = $('#d-animshow'),
 		onhide = $('#d-animhide')
@@ -107,64 +99,22 @@ $.getJSON('/javascripts/animate.json').then(function(data){
 		}
 	}
 
-
 	$('#d-animshow, #d-animhide').selectric()
-
 })
 
 
+// set up examples
 var k = {}
 $('.example code').each(function(i){
 	k[ $(this).attr('ex') ] = $(this).html()
 })
 
-
 $('.example button').on('click', function(){
 	var num = $(this).siblings('pre').find('code').attr('ex')
 	eval(k[num])
 })
-// var k  = $('.example button').siblings('pre').find('code').html()
-
-// console .log( k )
-// eval(k)
-// var j = 'function(){console.log("yeye")}'
-// var fn = window[j]
-// fn()
-// fn.apply(null)
-/*var fn = window[k]
-fn()*/
-// JSON.parse(k)
-// k.call()
-// eval(k)
-// $(k)
 
 
 
 
-
-
-
-
-
-
-/*	ICON DISPLAY:
-	set title 'Steadysets icons - (16px grid)'
-	get each icon
-	shift() first one
-
-
-*/
-
-
-/*	ICON OPTIONS
-each font set separately 
-	font files named icomoon-typicons
-	stylesheet for each font set
-		make sure each set content starts from different '\e00' - UNNECESSARY
-		each font has different prefix - eg: 		i-typicons-support
-
-	each file contains the typicons 'i-times' icon
-
-
-*/
 
