@@ -30,10 +30,10 @@ To install:
 <script src="javascript/igrowl.min.js">
 
 <-- at least one of the following icon stylesheets: --> 
-<link rel="stylesheet" href="stylesheets/vicons.css">
-<link rel="stylesheet" href="stylesheets/feather.css">
-<link rel="stylesheet" href="stylesheets/steadysets.css">
-<link rel="stylesheet" href="stylesheets/linecons.css">
+<link rel="stylesheet" href="stylesheets/font css/vicons.css">
+<link rel="stylesheet" href="stylesheets/font css/feather.css">
+<link rel="stylesheet" href="stylesheets/font css/steadysets.css">
+<link rel="stylesheet" href="stylesheets/font css/linecons.css">
 ```
 Also, include the respective font files (eg: `igrowl-feather.eot`, `igrowl-feather.svg`, `igrowl-feather.ttc`, etc.).
 
