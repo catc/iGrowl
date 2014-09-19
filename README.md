@@ -16,7 +16,29 @@ iGrowl has 3 dependencies:
   * [Steadysets](https://dribbble.com/shots/929153-Steady-set-of-icons) by [Tommy Sähl](http://tommysahl.com/)
   * [Linecons](http://designmodo.com/linecons-free/) by [Sergey Shmidt](http://shmidt.in/)
 
-All icon packs have been compiled using [Icomoon](https://icomoon.io/) app
+All icon packs have been compiled using [Icomoon](https://icomoon.io/) app.
+
+## Installation
+To install:
+```HTML
+<-- dependencies: jQuery + animate.css --> 
+<link rel="stylesheet" href="stylesheets/animate.min.css">
+<script src="javascript/jquery.min.js">
+
+<-- iGrowl CSS + JS --> 
+<link rel="stylesheet" href="stylesheets/igrowl.min.css">
+<script src="javascript/igrowl.min.js">
+
+<-- at least one of the following icon stylesheets: --> 
+<link rel="stylesheet" href="stylesheets/vicons.css">
+<link rel="stylesheet" href="stylesheets/feather.css">
+<link rel="stylesheet" href="stylesheets/steadysets.css">
+<link rel="stylesheet" href="stylesheets/linecons.css">
+```
+Also, include the respective font files (eg: `igrowl-feather.eot`, `igrowl-feather.svg`, `igrowl-feather.ttc`, etc.).
+
+Note: you may need to change the icon css paths to the font files depending on how your project is organized.
+
 
 ## Usage
 To generate an iGrowl alert, simply call it by:
