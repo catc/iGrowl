@@ -129,6 +129,7 @@
 
 			if ( options.animation ) {
 				this.template
+					.removeClass( options.animShow )
 					.addClass( options.animHide )
 					.one(animStart, function(e){
 						if ( typeof options.onHide === 'function' ) options.onHide();
