@@ -1,0 +1,24 @@
+{
+  "name": "iGrowl",
+  "version": "0.0.0",
+  "authors": "Catalin Covic (catalin.covic@gmail.com)",
+  "description": "Growl-like notifications with an emphasis on icons.",
+  "main": "js/igrowl.js",
+  "repository" :
+  {
+    "type" : "git",
+    "url" : "http://github.com/catc/iGrowl.git"
+  },
+  "keywords": [
+    "notification",
+    "growl"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt-contrib-uglify": "~0.6.0",
+    "grunt-contrib-sass": "~0.8.1",
+    "grunt-contrib-cssmin": "~0.10.0",
+    "grunt-contrib-copy": "~0.6.0"
+  }
+}
