@@ -19,7 +19,7 @@ iGrowl has 3 dependencies:
 All icon packs have been compiled using [Icomoon](https://icomoon.io/) app.
 
 ## Installation
-To install:
+To install, grab the necessary iGrowl files from `dist`.
 ```HTML
 <-- dependencies: jQuery + animate.css --> 
 <link rel="stylesheet" href="stylesheets/animate.min.css">
