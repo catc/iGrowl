@@ -53,9 +53,7 @@ For a full list of properties and methods, demos and examples, see [iGrowl](http
 
 ## Features to come
 Features I plan on adding:
-* better link integration
-* more styles + options to customize styles
-* add [alert role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role)
+* none at the moment, I'm open to any requests/ideas
 
 ## License
 iGrowl is licensed under the MIT license (http://opensource.org/licenses/MIT).
