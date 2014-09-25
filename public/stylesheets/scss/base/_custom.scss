@@ -1,0 +1,128 @@
+/* =Links
+----------------------------------------------- */
+a {
+    &:link, &:hover, &:focus, &:visited {
+        //color:inherit;
+        text-decoration: none;
+    }
+}
+
+/* remove outlines from firefox */
+button::-moz-focus-inner {
+  border: 0;       
+}
+:link:focus, :visited:focus { 
+    -moz-outline: none; 
+}
+
+
+/* =Clears
+-------------------------------------------------------------- */
+/* clearfix */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+html[xmlns] .clearfix {
+    display: block;
+}
+ 
+* html .clearfix {
+    height: 1%;
+}
+
+
+
+/* =Mobile
+-------------------------------------------------------------- */
+/* * {
+    -webkit-tap-highlight-color: transparent;
+} */
+
+
+/* =Other
+-------------------------------------------------------------- */
+*,
+*:after,
+*::before {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* =Buttom reset
+-------------------------------------------------------------- */
+button {
+    border: none;
+    background:none;
+    outline: none;
+    box-shadow: none;
+    color: inherit;
+    text-shadow: none;
+    &:hover, &:focus, &:active {
+        /* border: none;
+        background:none;
+        outline: none;
+        box-shadow: none;
+        color: inherit;
+        text-shadow: none;  */
+    }
+}
+
+/* =Input reset
+-------------------------------------------------------------- */
+input {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    &:focus { 
+        outline: none;
+    }
+}
+
+/* =Sticky footer
+-------------------------------------------------------------- */
+/* info -- http://getbootstrap.com/examples/sticky-footer/
+wrap main content in #wrap
+have footer you want sticky
+*/
+
+/* 
+$sfooter: 60px;                     // set to height of footer
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+#wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -1*$sfooter;
+    padding: 1px 0 $sfooter;        // 1px set to contain any margins
+}
+footer {
+    padding: 1px;                   // minimum - to contain any margins
+    background: $b5;
+    height: $sfooter;
+}
+*/
+
+
+/* =Font smoothing
+-------------------------------------------------------------- */
+// http://www.dev-metal.com/fix-ugly-font-rendering-google-chrome/
+// http://stackoverflow.com/questions/10953037/google-webfonts-render-choppy-in-chrome-on-windows?rq=1
+
+/* @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: 'FontName';
+            src: url('/fonts//webfont.svg#svgFontName') format('svg');
+        font-weight: 400;
+    }
+} */
+
+

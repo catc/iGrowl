@@ -1,4 +1,4 @@
-/*! iGrowl v1.0 
+/*! iGrowl v2.0
 	Copyright (c) 2014 Catalin Covic 
 	https://github.com/catc 
 */
@@ -9,7 +9,7 @@
 	var animStart = 'webkitAnimationStart oanimationstart MSAnimationStart animationstart',
 		animEnd = 'webkitAnimationEnd oanimationend MSAnimationEnd animationend',
 	
-		growlTemplate = '<div class="igrowl animated"><div class="igrowl-text"></div><button class="igrowl-dismiss i-times"></button></div>'
+		growlTemplate = '<div class="igrowl animated" role="alert"><div class="igrowl-text"></div><button class="igrowl-dismiss i-times"></button></div>'
 
 
 	var iGrowl = function(options){
@@ -42,6 +42,9 @@
 		// title + message
 		if ( options.title ) template.find('.igrowl-text').prepend('<div class="igrowl-title">' + options.title + '</div>')
 		if ( options.message ) template.find('.igrowl-text').append('<div class="igrowl-message">' + options.message + '</div>')
+
+		// link
+		if ( options.link ){ template.addClass('igrowl-link').children('.igrowl-icon, .igrowl-text').wrapAll('<a href="' + options.link +'" target="_' + options.target + '" />') }
 
 		template.attr('alert-placement', options.placement.x + ' ' + options.placement.y )
 		return template
@@ -122,7 +125,7 @@
 
 	iGrowl.prototype = {
 		// hides alert
-		dismiss: function(optionsz, template){
+		dismiss: function(){
 			var options = this.options,
 				template = this.template,
 				growl = this
@@ -155,11 +158,18 @@
 	};
 
 
+	// initiate growl
 	$.iGrowl = function(settings){
+		// generate alert
 		var growl = new iGrowl( settings )
 		return growl
 	}
 
+	// dismiss all alerts
+	$.iGrowl.prototype.dismissAll = function(placement){
+		if ( placement === 'all' ) { $('.igrowl button').trigger('click') } 
+		else { $('.igrowl[alert-placement="'+placement+'"] button').trigger('click') }
+	}
 
 	// default settings
 	$.iGrowl.prototype.defaults = {
@@ -167,6 +177,9 @@
 		title : 		null,
 		message : 		null,
 		icon : 			null,
+		
+		link : 			null,
+		target : 		'self',
 
 		small : 		false,
 		delay : 		2500,

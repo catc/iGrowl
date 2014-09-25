@@ -1,7 +1,4 @@
-/*! iGrowl v1.0 
-	Copyright (c) 2014 Catalin Covic 
-	https://github.com/catc 
-*/
+/*! iGrowl v2.0 | Copyright (c) 2014 Catalin Covic | https://github.com/catc */
 
 
 /* Mixins
@@ -35,13 +32,14 @@ body {
 	font-family: "Lato", 'serif';
 }
 
+
+
 .igrowl {
 	position: fixed;
 	z-index: 9999;
-	// padding: 8px 15px;
-	padding: 8px 30px 8px 15px;
 	border-radius: 3px;
 	border: 1px solid;
+	padding: 8px 30px 8px 15px;
 
 	@include transition(bottom 0.2s ease, top 0.2s ease);
 	
@@ -66,6 +64,16 @@ body {
 		width: 480px;
 	}
 }
+
+.igrowl-link {
+	padding: 0;
+	a {
+		padding: 8px 30px 8px 15px;
+		display: block;
+	}
+}
+
+
 .igrowl-center {
 	left: 50%;
 	@include respond-to(growlMed) {

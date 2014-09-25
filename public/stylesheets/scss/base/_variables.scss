@@ -1,0 +1,150 @@
+/* =Variables
+-------------------------------------------------------------- */
+/* Fonts */
+$font1: "Lato", sans-serif;
+$font2: "Open Sans Condensed", sans-serif;
+
+
+/* Colors -- http://clrs.cc/ + http://colorschemedesigner.com/ */
+$b1: #111;
+$b2: #222;
+$b3: #444;
+$b4: #666;
+$b5: #aaa;
+$b6: #ddd;
+$b7: #ededed;
+$white: #fff;
+
+
+// http://www.dtelepathy.com/blog/inspiration/beautiful-color-palettes-for-your-next-web-project
+$a1: #333;
+$a2: #424242;
+$a3: #00ccd6;
+$a4: #efefef;
+$a5: #ffd900;
+
+$a3: #0AADE0;
+$a5: #FFB800;
+
+// Cool
+$aqua:  #7FDBFF;
+$blue:  #0074D9;
+$navy:  #001F3F;
+$teal:  #39CCCC;
+$green: #2ECC40;
+$olive: #3D9970;
+$lime:  #01FF70;
+
+// Warm
+$yellow:  #FFDC00;
+$orange:  #FF851B;
+$red:     #FF4136;
+$fuchsia: #F012BE;
+$purple:  #B10DC9;
+$maroon:  #85144B;
+
+
+/* Media Query Breakpoints */
+$bsmall: 480px;
+$bmed: 767px;
+$bbig: 979px;
+$bhuge: 1200px;
+
+
+/* =Mixins
+-------------------------------------------------------------- */
+// Sass::Script::Number.precision = 5;
+
+// grid setup
+@mixin grid_setup () {
+    @for $i from 1 through $grid_total_parts {
+        .col_#{$i} {
+            width:( (100*$i + $i*$grid_spacing - $grid_total_parts*$grid_spacing)/$grid_total_parts)  *1%;
+        } 
+    }
+    .col_#{$grid_total_parts} { margin-left: 0 !important; }
+}
+
+// media queries
+@mixin respond-to($mediaq) {
+	@if $mediaq == phone {				// to  480px
+		@media only screen and (max-width : $bsmall) { @content; }
+	}
+	@else if $mediaq == tablet {		// to 767
+		@media only screen and (max-width : $bmed) { @content; }
+	}
+	@else if $mediaq == computer1 {		// 768 - 979
+		@media only screen and ( min-width: $bmed + 1 ) and ( max-width : $bbig) { @content; }
+	} 		
+	@else if $mediaq == computer2 {		// 980 - 1199
+		@media only screen and (min-width : $bbig + 1) and ( max-width : $bhuge - 1) { @content; }
+	}
+	@else if $mediaq == computer3 {		// 1200+
+		@media only screen and (min-width : $bhuge) { @content; }
+	}
+	
+	@else if $mediaq == growlMed {		// 481 - 1023
+		@media only screen and ( min-width: 481px ) and ( max-width : 1023px) { @content; }
+	}		
+	@else if $mediaq == growlBig {		// 1024+
+		@media only screen and (min-width : 1024px) { @content; }
+	}
+	@else if $mediaq == growlHuge {		// 1600+
+		@media only screen and (min-width : 1600px) { @content; }
+	}
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content};
+  :-moz-placeholder           {@content};
+  ::-moz-placeholder          {@content};
+  :-ms-input-placeholder      {@content};
+}
+// call using: 		@include placeholder { // include font style, color, weight }
+
+@mixin transition($content...) {
+	-webkit-transition: $content;
+	-moz-transition: $content;
+	transition: $content;
+}
+
+@mixin transform ($content) {
+	-webkit-transform: $content;
+	-moz-transform: $content;
+	-ms-transform: $content;
+	transform: $content;
+}
+
+@mixin animation ($content) {
+	-webkit-animation: $content;
+	-moz-animation: $content;
+	animation: $content;
+}
+
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+/*  call by: 
+
+@include keyframes( NAME ) { 
+	// anything you want animated, eg:
+	from {
+		color: red;
+	}
+	to {
+		color: blue;
+	}
+}
+
+ */
+
+

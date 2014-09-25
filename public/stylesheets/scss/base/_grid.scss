@@ -1,0 +1,73 @@
+/* =Grid System
+-------------------------------------------------------------- */
+#container {
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+    @include respond-to(tablet) {       // to 767
+       max-width: 90%
+    }
+    @include respond-to(phone) {        // to 480
+        max-width: 320px;
+    }                          
+    @include respond-to(computer1) {    // 768 - 979
+        min-width: 750px;
+        width: 95%;                 
+    }                     
+    @include respond-to(computer2) {    // 980 - 1199
+         width: 960px;   
+    }
+/*     @include respond-to(computer3) {    // 1200+
+        width: 1170px;
+    } */
+}
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}
+
+/* Column setup */
+$grid_total_parts: 12;
+$grid_spacing: 1;               // spacing between blocks, is converted to %
+
+@include grid_setup(); 
+
+div[class^="col_"] {
+    @include box-sizing(border-box);
+    // @include background-clip(padding-box !important); 
+    display: inline-block;
+    position: relative;
+    min-height: 1px;
+
+    margin-left: $grid_spacing * 1%;
+    vertical-align: top;
+    //padding:0 1.5%;
+    
+    //background-color: red;        // testing purposes
+    img {
+        @include box-sizing(border-box);
+        width: 100%;
+        height: auto;
+    }
+    &:first-of-type {
+        margin-left: 0 !important;
+    }
+    @include respond-to(tablet) {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: $bsmall) {
+    @-ms-viewport {
+        width: 320px;
+    }
+}
+
+@media screen and (min-width: $bbig + 1) {
+    @-ms-viewport {
+        width: device-width;
+    }
+}

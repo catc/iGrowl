@@ -1,0 +1,526 @@
+extends layout
+
+block content
+	#container
+		h1 iGrowl
+
+		#ss-download
+			div.download
+				a(href="https://github.com/catc/iGrowl/zipball/master")
+					span.ico-download
+					| Download .zip		
+			div.download
+				a(href="https://github.com/catc/iGrowl/tarball/master")
+					span.ico-download
+					| Download .tar
+			div.view
+				a(href="https://github.com/catc/iGrowl/") 
+					span.ico-github
+					| View on github
+		
+		hr
+
+		.content
+			p#ss-intro.
+				iGrowl is a jQuery plugin that generates growl-like notifications with an emphasis on icons.
+				Alerts are fully responsive and CSS animations are used to provide optimal performance.
+				The plugin also includes <a href="#ss-installation">4 optional icon packs</a>.
+
+
+			h2#ss-demo Demo
+			form.demo
+				p 
+					| Create your own growl. For more information on each property, see 
+					a(href="#ss-features") features
+					| .
+				.double-input
+					div
+						label(for="d-title") Title
+						input(name="title" value="This is an iGrowl alert")#d-title
+					div
+						label(for="d-message") Message
+						input(name="message" value="Hello world!")#d-message
+
+				.double-input
+					div
+						label(for="d-link") Link
+						input(name="link" value="")#d-link
+					div
+						label(for="d-target") Link target
+						input(name="target" value="blank")#d-target
+
+				.double-input
+					div
+						label(for="d-type") Type
+						select(name="type")#d-type.groups
+							option(value="info") Info
+							option(value="success") Success
+							option(value="notice") Notice
+							option(value="error") Error
+							option(value="simple") Simple
+							option(disabled) Saturated/Deeper colors
+							option(value="info-sat") Info (saturated)
+							option(value="success-sat") Success (saturated)
+							option(value="notice-sat") Notice (saturated)
+							option(value="error-sat") Error (saturated)
+					div
+						label(for="d-small") Alert size
+						select(name="small")#d-small
+							option(value="false") Regular
+							option(value="true") Small
+				
+
+
+				.double-input
+					div
+						label(for="d-icon") Icon
+						input(name="icon" value="feather-cog")#d-icon
+					div.max-width 
+						label Select an icon from below:
+				#icons
+
+
+				.double-input
+					div
+						label(for="d-delay") Delay
+						input(name="delay" value="3000")#d-delay
+					div
+						label(for="d-spacing") Spacing
+						input(name="spacing" value="20")#d-spacing
+
+				.double-input
+					div
+						label(for="d-offsetx") Offset X
+						input(name="offset[x]" value="20")#d-offsetx
+					div
+						label(for="d-offsety") Offset Y
+						input(name="offset[y]" value="20")#d-offsety
+
+				.placement
+					span Placement:
+					div
+						label(for="d-tl")
+							input(type="radio" name="placement" value="top left")#d-tl
+							span.ico-arrow-up-left
+						
+						label(for="d-tc")
+							input(type="radio" name="placement" value="top center")#d-tc
+							span.ico-arrow-up
+						
+						label(for="d-tr")
+							input(type="radio" name="placement" value="top right" checked)#d-tr
+							span.ico-arrow-up-right
+
+						label(for="d-bl")
+							input(type="radio" name="placement" value="bottom left")#d-bl
+							span.ico-arrow-down-left
+						
+						label(for="d-bc")
+							input(type="radio" name="placement" value="bottom center")#d-bc
+							span.ico-arrow-down
+						
+						label(for="d-br")
+							input(type="radio" name="placement" value="bottom right")#d-br
+							span.ico-arrow-down-right
+
+				.single-input
+					label(for="d-animation") Enable animation
+					select(name="animation")#d-animation
+						option(value="true") Enable
+						option(value="false") Disable
+
+
+				.double-input
+					div
+						label(for="d-animshow") Enter animation
+						select(name="animShow")#d-animshow.groups
+					div
+						label(for="d-animhide") Exit animation
+						select(name="animHide")#d-animhide.groups
+
+				button(type="submit").btn Growl!
+
+
+			h2#ss-installation Installation
+			
+			#installation
+				p iGrowl has 3 dependencies:
+				ul
+					li: a(href="http://jquery.com/", target="_blank") jQuery
+					li: a(href="https://github.com/daneden/animate.css", target="_blank") animate.css
+					li at least one of the 4 icon packs included in the <code>.zip</code> - each includes the respective css and font files
+						ul
+							li 
+								a(href="https://dribbble.com/shots/1663443-60-Vicons-Free-Icon-Set", target="_blank") Vicons
+								|  by 
+								a(href="http://victorerixon.com/", target="_blank") Victor Erixon
+
+							li 
+								a(href="http://colebemis.com/feather/", target="_blank") Feather
+								|  by 
+								a(href="http://colebemis.com/", target="_blank") Cole Bemis
+							li 
+								a(href="https://dribbble.com/shots/929153-Steady-set-of-icons", target="_blank") Steadysets
+								|  by 
+								a(href="http://tommysahl.com/", target="_blank") Tommy Sähl
+							li 
+								a(href="http://designmodo.com/linecons-free/", target="_blank") Linecons
+								|  by 
+								a(href="http://shmidt.in/", target="_blank") Sergey Shmidt
+
+				p All icon packs have been compiled using the <a href="https://icomoon.io/" target="_blank">Icomoon</a> app.
+				p To get started, include the following in your project:
+
+				pre.language-markup
+					code.language-markup.
+						&lt;-- dependencies: jQuery + animate.css --> 
+						&lt;link rel="stylesheet" href="stylesheets/animate.min.css">
+						&lt;script src="javascript/jquery.js"></script>
+						<br>
+						&lt;-- iGrowl CSS + JS --> 
+						&lt;link rel="stylesheet" href="stylesheets/igrowl.min.css">
+						&lt;script src="javascript/igrowl.min.js"></script>
+						<br>
+						&lt;-- at least one of the following icon stylesheets: --> 
+						&lt;link rel="stylesheet" href="stylesheets/vicons.css">
+						&lt;link rel="stylesheet" href="stylesheets/feather.css">
+						&lt;link rel="stylesheet" href="stylesheets/steadysets.css">
+						&lt;link rel="stylesheet" href="stylesheets/linecons.css">
+				p Also, include the respective font files (eg: <code>igrowl-feather.eot</code>, <code>igrowl-feather.svg</code>, <code>igrowl-feather.ttc</code>, etc).
+				p <strong>Note:</strong> you may need to change the icon CSS paths to the font files depending on how your project is organized.
+
+				p To install via Bower: <code>$ bower install igrowl</code>.
+			
+			h2 Getting started
+			h3#ss-usage Usage
+			p To generate an iGrowl alert, simply call it by:
+			pre.language-javascript
+				code.language-javascript.
+					$.iGrowl({
+						message: "Hello world!",
+						// other properties...
+					})
+
+			h3#ss-properties Properties
+			p The full list of iGrowl properties:
+			table
+				tr
+					th Property
+					th Default
+					th Type
+					th Description
+				tr
+					td: code type
+					td: code.language-javascript 'info'
+					td: code.language-javascript string
+					td Type of alert, available options are: <br>
+						code info, success, notice, error, simple <br>
+						| For a more saturated/deeper color style, add the <code>-sat</code> suffix, eg: <br>
+						code info-sat, success-sat, notice-sat, error-sat
+				tr
+					td: code title
+					td: code.language-javascript null
+					td: code.language-javascript string
+					td Alert title (optional)
+				tr
+					td: code message
+					td: code.language-javascript null
+					td: code.language-javascript string
+					td Alert message (optional)
+				tr
+					td: code icon
+					td: code.language-javascript null
+					td: code.language-javascript string
+					td Icon class (optional), in the form of 
+						br
+						code iconPack-iconName
+				tr
+					td: code link
+					td: code.language-javascript null
+					td: code.language-javascript string
+					td Encapsulates the entire alert in a link
+				tr
+					td: code target
+					td: code.language-javascript self
+					td: code.language-javascript string
+					td Anchor target of alert (if link property above is specified), options are:
+						br
+						code self, blank
+
+
+				tr
+					td: code delay
+					td: code.language-javascript 2500
+					td: code.language-javascript number
+					td Delay before alert auto-dismisses (optional). Set to <code>0</code> for persistence.
+				tr.row-strong
+					td: code small
+					td: code.language-javascript false
+					td: code.language-javascript boolean
+					td Size of alert - either regular or small
+
+				tr
+					td: code spacing
+					td: code.language-javascript 30
+					td: code.language-javascript number
+					td Spacing between alerts
+
+				tr
+					td: code placement[x]
+					td: code.language-javascript 'right'
+					td: code.language-javascript string
+					td Horizontal placement, accepts:	
+						br
+						code left, center, right
+
+				tr
+					td: code placement[y]
+					td: code.language-javascript 'top'
+					td: code.language-javascript string
+					td Vertical placement, accepts:	
+						br
+						code top, bottom
+
+				tr
+					td: code offset[x]
+					td: code.language-javascript 20
+					td: code.language-javascript number
+					td Horizontal offset from edge of window
+						
+				tr
+					td: code offset[y]
+					td: code.language-javascript 20
+					td: code.language-javascript number
+					td Vertical offset from edge of window
+
+				tr.row-strong
+					td: code animation
+					td: code.language-javascript true
+					td: code.language-javascript boolean
+					td Enable or disable animation
+
+				tr
+					td: code animShow
+					td: code.language-javascript 'bounceIn'
+					td: code.language-javascript string
+					td Alert animation on enter
+
+				tr
+					td: code animHide
+					td: code.language-javascript 'bounceOut'
+					td: code.language-javascript string
+					td Alert animation on exit
+
+				tr.row-strong
+					td: code onShow
+					td: code.language-javascript null
+					td: code.language-javascript function
+					td Function to run once enter animation begins, will not run if animation is set to 
+						code.language-javascript false
+
+				tr
+					td: code onShown
+					td: code.language-javascript null
+					td: code.language-javascript function
+					td Function to run once enter animation completes
+
+				tr
+					td: code onHide
+					td: code.language-javascript null
+					td: code.language-javascript function
+					td Function to run once exit animation begins, will not run if animation is set to 
+						code.language-javascript false
+				tr
+					td: code onHidden
+					td: code.language-javascript null
+					td: code.language-javascript function
+					td Function to run once exit animation completes
+			p 
+				strong Note: 
+				| alerts do not necessarily need both a message and a title.
+			p.reg-list You can include links in alerts through 2 ways: 
+			ul
+				li using the <code>link</code> property which causes the entire alert to be a link,
+				li adding links in the message or title as html, eg:
+			pre.language-javascript
+				code.language-javascript.
+					$.iGrowl({
+						title : 'This item right &lt;a href="http://www.link.com">here&lt;/a> is a link',
+						// other properties
+					})
+			p For a detailed example, <a href="#ss-linkexample">see here</a>.
+
+			h3#ss-defaults Changing default settings
+			p To change the default settings:
+			pre.language-javascript
+				code.language-javascript.
+					$.iGrowl.prototype.defaults.property_name = desired_default
+					<br>
+					// examples
+					$.iGrowl.prototype.defaults.icon = 'feather-cog'
+					$.iGrowl.prototype.defaults.placement.y = 'bottom'
+			
+			h3#ss-methods Public Methods
+			p You can manually dismiss individual alerts by:
+			pre.language-javascript
+				code.language-javascript.
+					var growl = $.iGrowl({ title: 'Welcome to the jungle' })
+
+					growl.dismiss()
+
+			p To dismiss <i>all</i> alerts, call <code class="language-javascript">$.iGrowl.prototype.dismissAll( placement )</code>:
+			pre.language-javascript
+				code.language-javascript.
+					// dismisses all alerts
+					$.iGrowl.prototype.dismissAll('all')
+
+					// dismisses all alerts at right top
+					$.iGrowl.prototype.dismissAll('right top')
+
+					// dismisses all alerts at center bottom
+					$.iGrowl.prototype.dismissAll('center bottom')
+
+
+			h2#ss-examples Examples
+			p Simple growl alert with icon, title and message.
+			.example
+				pre.language-javascript
+					code.language-javascript(ex="1").
+						$.iGrowl({
+							title: 'Having issues?',
+							message: 'Chat with a technician for support',
+							icon: 'vicons-support'
+						})		
+				button.btn(type="button") Run growl
+
+			p Displaying an error in the bottom-center position.
+			.example
+				pre.language-javascript
+					code.language-javascript(ex="2").
+						$.iGrowl({
+							type: 'error',
+							title: 'Uh oh - something went wrong!',
+							icon: 'linecons-fire',
+							placement : {
+								x: 	'center',
+								y: 	'bottom'
+							}
+						})		
+				button.btn(type="button") Run growl
+
+			p Small alert with no animation.
+			.example
+				pre.language-javascript
+					code.language-javascript(ex="3").
+						$.iGrowl({
+							title: 'Welcome to the internet!',
+							message: 'We hope you enjoy your stay.',
+							small: true,
+							animation: false,
+							delay: 3000
+						})		
+				button.btn(type="button") Run growl
+
+			p#ss-linkexample Alert containing a link with a <code>_blank</code> anchor target, and an alert containing a link in the message property.
+			.example
+				pre.language-javascript
+					code.language-javascript(ex="6").
+						// entire alert is a link
+						$.iGrowl({
+							icon : 'feather-image',
+							message : 'Looking for a great image gallery?',
+							link : 'http://imgur.com/',
+							target : 'blank',
+							delay : 6000
+						})
+
+						// link is contained in part of the message
+						$.iGrowl({
+							icon : 'feather-image',
+							message : 'Looking for a great image gallery? <a href="http://imgur.com/" target="_blank">Click here</a>',
+							delay : 6000
+						})	
+				button.btn(type="button") Run growl	
+
+			p <strong>Persistent</strong> alert <code>100px</code> from the top and <code>80px</code> spacing between alerts.
+			.example
+				pre.language-javascript
+					code.language-javascript(ex="4").
+						$.iGrowl({
+							type: 'success',
+							icon: 'vicons-envelope',
+							message: 'You have mail!',
+							delay: 0,
+							spacing: 80,
+							offset : {
+								y: 	100
+							}
+						})		
+				button.btn(type="button") Run growl
+
+			p <code>fadeInLeftBig</code> and <code>fadeOutDown</code> animations, and <code>onHidden</code> callback.
+			.example
+				pre.language-javascript
+					code.language-javascript(ex="5").
+						$.iGrowl({
+							type: 'notice',
+							message: 'The item has been added to your cart',
+							icon: 'vicons-cart',
+							placement : {
+								x: 	'center'
+							},
+							animShow: 'fadeInLeftBig',
+							animHide: 'fadeOutDown',
+							onHidden: function(){
+								alert('alert is now hidden!')
+							}
+						})		
+				button.btn(type="button") Run growl
+			
+			h2#ss-customstyle Custom styles
+			p Creating your own custom styles is easy. 
+			pre.language-css
+				code.language-css.
+					.igrowl-customeName {
+						background: customColor;
+						border-color: customColor;
+
+						.igrowl-message { color: customColor; }
+						.igrowl-title { color: customColor; }
+						.igrowl-icon { color: customColor; }
+					}
+			p and then use your style by:
+			pre.language-javascript
+				code.language-javascript.
+					$.iGrowl({
+						type : 'customName',
+						// other properties
+					})
+
+			h2#ss-contributing Contributing
+			p If you find any bugs, have feature requests, or would like to contribute - either send me a pull request or open a ticket and I'll do my best to follow up on it. 
+			p Developed and maintained by <a href="https://github.com/catc" target="_blank">Catalin Covic</a> under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>.
+
+
+		//- .sidebar
+		nav#sidebar
+			ul.nav
+				span iGrowl
+				li: a(href="#ss-download") Download
+				li: a(href="#ss-demo") Demo
+				li: a(href="#ss-installation") Installation
+
+				li.sub
+					span Getting started
+					ul
+						li: a(href="#ss-usage") Usage
+						li: a(href="#ss-properties") Properties
+						li: a(href="#ss-defaults") Changing default settings
+						li: a(href="#ss-methods") Public methods & prototypes
+
+				li: a(href="#ss-examples") Examples
+				li: a(href="#ss-customstyle") Custom styles
+				li: a(href="#ss-contributing") Contributing
+					
+
+	
