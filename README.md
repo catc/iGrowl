@@ -62,3 +62,6 @@ iGrowl is licensed under the MIT license (http://opensource.org/licenses/MIT).
 
 ## Contributing
 If you find any bugs, have feature requests, or would like to contribute - either send me a pull request or open a ticket and I'll do my best to address it.
+
+Contributors:
+- [Curtis Maddalozzo](https://github.com/cmaddalozzo)
