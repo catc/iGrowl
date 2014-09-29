@@ -5,6 +5,17 @@ iGrowl is a jQuery plugin that generates growl-like notifications with an emphas
 
 For **full documentation**, see [iGrowl](http://catc.github.io/iGrowl/).
 
+### Features
+* Elegant, clean look
+* Highly customizable:
+    * includes [numerous options](http://catc.github.io/iGrowl/#ss-properties), styles and animations
+    * can change defaults
+    * includes animation callbacks
+* CSS animations - smooth performance on all devices
+* Responsive - media queries for alert size
+* Icon packs included
+
+
 ## Dependencies
 iGrowl has 3 dependencies:
 
@@ -39,7 +50,10 @@ Also, include the respective font files (eg: `igrowl-feather.eot`, `igrowl-feath
 
 **Note:** you may need to change the icon css paths to the font files depending on how your project is organized.
 
-To install via **Bower**, just do `$ bower install igrowl`.
+To install via **Bower**: 
+```bash
+$ bower install igrowl
+```
 
 ## Usage
 To generate an iGrowl alert, simply call it by:
