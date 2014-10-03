@@ -1,7 +1,7 @@
 iGrowl
 ======
 
-iGrowl is a jQuery plugin that generates growl-like notifications with an emphasis on icons. Alerts are fully responsive and CSS animations are used to provide optimal performance.The plugin also includes [4 optional icon packs](http://catc.github.io/iGrowl/#ss-installation).
+iGrowl is a lightweight jQuery plugin that generates growl-like notifications with an emphasis on icons. Alerts are fully responsive and CSS animations are used to provide optimal performance.The plugin also includes [4 optional icon packs](http://catc.github.io/iGrowl/#ss-installation).
 
 For **full documentation**, see [iGrowl](http://catc.github.io/iGrowl/).
 
@@ -67,7 +67,8 @@ For a full list of properties and methods, demos and examples, see [iGrowl](http
 
 ## Features to come
 Features I plan on adding:
-* none at the moment, I'm open to any requests/ideas
+* custom images in notifications
+If you have any suggestions or requests, email me or open a ticket.
 
 ## License
 iGrowl is licensed under the MIT license (http://opensource.org/licenses/MIT).
