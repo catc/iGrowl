@@ -515,30 +515,60 @@ block content
 						})		
 				button.btn(type="button") Run growl	
 			
-			h2#ss-customstyle Custom styles
-			p Creating your own custom styles is easy. 
-			pre.language-css
-				code.language-css.
-					.igrowl-customeName {
-						background: customColor;
-						border-color: customColor;
+			#ss-customstyle
+				h2 Custom styles & icon sets
+				p Creating your own custom styles is easy. 
+				pre.language-css
+					code.language-css.
+						.igrowl-customeName {
+							background: customColor;
+							border-color: customColor;
 
-						.igrowl-message { color: customColor; }
-						.igrowl-title { color: customColor; }
-						.igrowl-icon { color: customColor; }
-					}
-			p and then use your style by:
-			pre.language-javascript
-				code.language-javascript.
-					$.iGrowl({
-						type : 'customName',
-						// other properties
-					})
+							.igrowl-message { color: customColor; }
+							.igrowl-title { color: customColor; }
+							.igrowl-icon { color: customColor; }
+						}
+				p and then use your style by:
+				pre.language-javascript
+					code.language-javascript.
+						$.iGrowl({
+							type : 'customName',
+							// other properties
+						})
+
+				p.
+					You can use your own icon sets. If they're images, just pass the source path to the <code>image[src]</code> property.
+					If you're trying to incorporate an icon font, try to follow the iGrowl font structure by
+					using one of the iGrowl font icon css (ie: <code>linecons.css</code>, <code>vicons.css</code>, etc) for reference.
+			
+				p.
+					By default, when you pass an icon name to iGrowl such as <code>linecons-pen</code> it adds the <code>i-linecons-pen</code> class to the div containing the icon.
+					To set up your icon set:
+				pre.language-css
+					code.language-css.
+						[class^="i-iconSetName-"], [class*=" i-iconSetName-"]  {
+							font-family: 'iconSetName';
+
+							/* other styling (see icon css for reference)  */
+						}
+				p Then assign each icon a unicode/ligature:
+				pre.language-css
+					code.language-css.
+						.i-iconSetName-iconName:before {
+							content: "icon-code";
+						}
+				p To use via iGrowl:
+				pre.language-javascript
+					code.language-javascript.
+						$.iGrowl({
+							icon : 'iconSetName-iconName',
+							// other properties
+						})
+
 
 			h2#ss-contributing Contributing
 			p If you find any bugs, have feature requests, or would like to contribute - either send me a pull request or open a ticket and I'll do my best to follow up on it. 
 			p Developed and maintained by <a href="https://github.com/catc" target="_blank">Catalin Covic</a> under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT license</a>.
-
 
 		//- .sidebar
 		nav#sidebar
@@ -557,7 +587,7 @@ block content
 						li: a(href="#ss-methods") Public methods & prototypes
 
 				li: a(href="#ss-examples") Examples
-				li: a(href="#ss-customstyle") Custom styles
+				li: a(href="#ss-customstyle") Custom styles & icons sets
 				li: a(href="#ss-contributing") Contributing
 			
 				

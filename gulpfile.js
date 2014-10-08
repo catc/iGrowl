@@ -171,7 +171,7 @@ gulp.task('gh-other', function(){
 });
 
 
-gulp.task('gh-page', ['gh-jade', 'scss', 'gh-css', 'gh-scripts', 'gh-fonts'], function(){
+gulp.task('gh-page', ['gh-jade', 'scss', 'gh-css', 'gh-scripts', 'gh-other'], function(){
 	console.log( 'successfully updated github page' );
 });
 

@@ -1104,6 +1104,11 @@ table {
   border-radius: 50%;
   border: 3px solid #FACC54; }
 
+#ss-customstyle p:nth-of-type(3) {
+  padding-top: 10px;
+  margin-top: 20px;
+  border-top: 1px solid #ddd; }
+
 /*======================================================================
   Selectric
 ======================================================================*/
