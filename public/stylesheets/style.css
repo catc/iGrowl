@@ -1088,6 +1088,10 @@ table {
   .btn:active {
     box-shadow: inset 0 2px 1px 0px rgba(0, 0, 0, 0.2); }
 
+.example-image img {
+  border-radius: 50%;
+  border: 3px solid #FACC54; }
+
 /*======================================================================
   Selectric
 ======================================================================*/

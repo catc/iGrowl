@@ -36,8 +36,12 @@
 		template.addClass('igrowl-'+options.type);
 
 
-		// icon - set up function to determine if icon is 24/18/32px grid
-		if ( options.icon ) template.prepend('<div class="igrowl-icon i-'+ options.icon + '"></div>');
+		// image / icon
+		if ( options.image.src ) {
+			template.prepend('<div class="igrowl-img '+ options.image.class +'"><img src="'+ options.image.src +'"</div>');
+		} else if (options.icon) {
+			template.prepend('<div class="igrowl-icon i-'+ options.icon + '"></div>');
+		}
 
 		// title + message
 		if ( options.title ) template.find('.igrowl-text').prepend('<div class="igrowl-title">' + options.title + '</div>');
@@ -180,11 +184,15 @@
 		type : 			'info',
 		title : 		null,
 		message : 		null,
-		icon : 			null,
-		
 		link : 			null,
 		target : 		'self',
-
+		
+		icon : 			null,
+		image : {
+			src : null,
+			class : null
+		},
+		
 		small : 		false,
 		delay : 		2500,
 		spacing :  		30,
@@ -204,6 +212,7 @@
 		onShown : 		null,
 		onHide : 		null,
 		onHidden : 		null,
+
 	};
 
 

@@ -4,7 +4,7 @@
   z-index: 9999;
   border-radius: 3px;
   border: 1px solid;
-  padding: 8px 30px 8px 15px;
+  padding: 8px 30px 8px 10px;
   -webkit-transition: bottom 0.2s ease, top 0.2s ease;
   -moz-transition: bottom 0.2s ease, top 0.2s ease;
   transition: bottom 0.2s ease, top 0.2s ease; }
@@ -70,16 +70,24 @@
   .igrowl-small {
     width: 320px; } }
 
-.igrowl-icon {
+.igrowl-icon, .igrowl-img {
   display: inline-block;
   vertical-align: middle;
-  width: 20%;
-  margin-right: 5%;
-  width: 45px;
-  margin-right: calc(5px); }
+  width: 45px; }
+
+.igrowl-icon {
+  margin: 0 5px; }
   .igrowl-icon + .igrowl-text {
-    width: 80%;
-    width: calc(100% - 50px); }
+    width: calc(100% - 55px); }
+
+.igrowl-img {
+  margin-right: 15px; }
+  .igrowl-img img {
+    display: block;
+    max-width: 100%;
+    height: auto; }
+  .igrowl-img + .igrowl-text {
+    width: calc(100% - 60px); }
 
 .igrowl-text {
   display: inline-block;

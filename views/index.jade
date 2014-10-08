@@ -420,6 +420,30 @@ block content
 						})		
 				button.btn(type="button") Run growl
 
+			p Alert containing an image.
+			pre.language-css
+				code.language-css.
+					/* custom styling */
+					.example-image img {
+						border-radius: 50%;
+						border: 3px solid #FACC54;
+					}	
+			.example
+				pre.language-javascript
+					code.language-javascript(ex="7").
+						$.iGrowl({
+							type: 'notice',
+							delay: 5000,
+							title: 'New friend request',
+							message: 'Greg Jackson has sent you a friend invite!',
+							
+							image: {
+								src: '/images/user.jpg',
+								class: 'example-image'
+							}
+						})		
+				button.btn(type="button") Run growl		
+
 			p#ss-linkexample Alert containing a link with a <code>_blank</code> anchor target, and an alert containing a link in the message property.
 			.example
 				pre.language-javascript
@@ -475,7 +499,7 @@ block content
 								alert('alert is now hidden!')
 							}
 						})		
-				button.btn(type="button") Run growl
+				button.btn(type="button") Run growl	
 			
 			h2#ss-customstyle Custom styles
 			p Creating your own custom styles is easy. 
