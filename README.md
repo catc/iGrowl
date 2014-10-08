@@ -68,6 +68,7 @@ For a full list of properties and methods, demos and examples, see [iGrowl](http
 ## Features to come
 Features I plan on adding:
 * custom images in notifications
+
 If you have any suggestions or requests, email me or open a ticket.
 
 ## License
