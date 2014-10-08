@@ -169,6 +169,9 @@
 	right: 0;
 	color: rgba(0, 0, 0, 0.5);
 	transition: color 0.3s ease;
+
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
 	&:before {
 		font-family: 'igrowl-feather', 'igrowl-linecons', 'igrowl-steadysets', 'igrowl-vicons';
 		font-size: 1.8rem !important;
