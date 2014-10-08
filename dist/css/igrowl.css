@@ -1,6 +1,4 @@
 /*! iGrowl v2.0 | Copyright (c) 2014 Catalin Covic | https://github.com/catc */
-/* iGrowl styling
------------------------------------------------ */
 .igrowl {
   position: fixed;
   z-index: 9999;
@@ -122,7 +120,8 @@
   .igrowl-dismiss:hover {
     color: #505050; }
 
-/* --------- Type styles --------- */
+/* iGrowl type styling - basic + saturated
+----------------------------------------------- */
 .igrowl-info {
   background: #b4e4ff;
   border-color: #5C9CCF; }
