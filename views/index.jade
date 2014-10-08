@@ -17,6 +17,11 @@ block content
 				a(href="https://github.com/catc/iGrowl/") 
 					span.ico-github
 					| View on github
+
+			span.social-media
+				<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fgithub.com%2Fcatc%2FiGrowl&amp;width&amp;layout=button&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://catc.github.io/iGrowl/" data-dnt="true" >Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				<iframe src="http://ghbtns.com/github-btn.html?user=catc&repo=iGrowl&type=watch&count=true"  allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
 		
 		hr
 
@@ -246,14 +251,23 @@ block content
 					td Anchor target of alert (if link property above is specified), options are:
 						br
 						code self, blank
-
-
 				tr
+					td: code image[src]
+					td: code.language-javascript null
+					td: code.language-javascript string
+					td Image source to include in alert - overrides icon.
+				tr
+					td: code image[class]
+					td: code.language-javascript null
+					td: code.language-javascript string
+					td Classes to add to <code>div</code> containing the image (optional).
+
+				tr.row-strong
 					td: code delay
 					td: code.language-javascript 2500
 					td: code.language-javascript number
 					td Delay before alert auto-dismisses (optional). Set to <code>0</code> for persistence.
-				tr.row-strong
+				tr
 					td: code small
 					td: code.language-javascript false
 					td: code.language-javascript boolean
@@ -546,7 +560,4 @@ block content
 				li: a(href="#ss-customstyle") Custom styles
 				li: a(href="#ss-contributing") Contributing
 			
-			.social-media		
-				<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fgithub.com%2Fcatc%2FiGrowl&amp;width&amp;layout=button&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe>
-				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://catc.github.io/iGrowl/" data-dnt="true" style="margin-top: 8px;">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-	
+				
