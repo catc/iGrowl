@@ -1,8 +1,5 @@
 /*! iGrowl v2.0 | Copyright (c) 2014 Catalin Covic | https://github.com/catc */
 
-
-/* Mixins
------------------------------------------------ */
 @mixin transition($content...) {
 	-webkit-transition: $content;
 	-moz-transition: $content;
@@ -23,16 +20,6 @@
 		@media only screen and (min-width : 1600px) { @content; }
 	}
 }
-
-
-
-/* iGrowl styling
------------------------------------------------ */
-body {
-	font-family: "Lato", 'serif';
-}
-
-
 
 .igrowl {
 	position: fixed;
@@ -116,7 +103,6 @@ body {
 	}	
 }
 
-
 .igrowl-icon {
 	display: inline-block;
 	vertical-align: middle;
@@ -181,8 +167,8 @@ body {
 }
 
 
-
-/* --------- Type styles --------- */
+/* iGrowl type styling - basic + saturated
+----------------------------------------------- */
 
 // basics
 .igrowl-info {

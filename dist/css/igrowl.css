@@ -1,11 +1,6 @@
 /*! iGrowl v2.0 | Copyright (c) 2014 Catalin Covic | https://github.com/catc */
-/* Mixins
------------------------------------------------ */
 /* iGrowl styling
 ----------------------------------------------- */
-body {
-  font-family: "Lato", 'serif'; }
-
 .igrowl {
   position: fixed;
   z-index: 9999;
