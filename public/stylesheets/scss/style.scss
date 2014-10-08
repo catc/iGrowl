@@ -140,6 +140,17 @@ p a:hover, #installation a:hover {
 	}
 }
 
+.social-media {
+	border-top: 1px solid #efefef;
+	margin-top: 8px;
+	padding-top: 10px;
+
+	iframe:first-child {
+		height: 22px !important;
+		margin-bottom: 6px;
+	}
+}
+
 .content {
 	width: calc(100% - 245px);
 	display: inline-block;
