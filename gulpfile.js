@@ -17,7 +17,8 @@ var gulp = require('gulp'),
 
 var css = __dirname + '/public/stylesheets',
 	js = __dirname + '/public/javascripts',
-	fonts = __dirname + '/public/fonts';
+	fonts = __dirname + '/public/fonts',
+	images = __dirname + '/public/images';
 
 
 
@@ -32,7 +33,7 @@ var dev = {
 // compile 
 gulp.task('scss', function(){
 	gulp.src( dev.scssInit )
-		.pipe( sass() )
+		.pipe( sass({errLogToConsole: true}) )
 		.pipe( gulp.dest( dev.cssDest ) );
 });
    
@@ -120,7 +121,7 @@ var gh = {
 	get cssDest (){ return this.dest + '/stylesheets/'; },
 	get jsDest (){ return this.dest + '/javascripts/'; },
 	get fontDest (){ return this.dest + '/fonts/'; },
-
+	get imageDest (){ return this.dest + '/images/'; },
 };
 
 // jade to index.html
@@ -160,10 +161,13 @@ gulp.task('gh-scripts', function(){
 		.pipe( gulp.dest( gh.jsDest ) );
 });
 
-// fonts
-gulp.task('gh-fonts', function(){
-	return gulp.src( fonts + '/*/*' )
+// fonts + images
+gulp.task('gh-other', function(){
+	gulp.src( fonts + '/*/*' )
 		.pipe( gulp.dest( gh.fontDest ) );
+
+	gulp.src( images + '/*' )
+		.pipe( gulp.dest( gh.imageDest ) );
 });
 
 
