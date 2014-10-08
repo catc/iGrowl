@@ -15,7 +15,6 @@ For **full documentation**, see [iGrowl](http://catc.github.io/iGrowl/).
 * Responsive - media queries for alert size
 * Icon packs included
 
-
 ## Dependencies
 iGrowl has 3 dependencies:
 
@@ -64,6 +63,12 @@ $.iGrowl({
 })
 ```
 For a full list of properties and methods, demos and examples, see [iGrowl](http://catc.github.io/iGrowl/) official documentation.
+
+### Browser support
+* Chrome & Firefox
+* IE 10+
+* Safari 4+
+
 
 ## Features to come
 Features I plan on adding:
