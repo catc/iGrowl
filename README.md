@@ -67,9 +67,9 @@ For a full list of properties and methods, demos and examples, see [iGrowl](http
 
 ## Features to come
 Features I plan on adding:
-* custom images in notifications
+* none at the moment
 
-If you have any suggestions or requests, email me or open a ticket.
+If you have any suggestions or requests, open a ticket or feel free to send me an email.
 
 ## License
 iGrowl is licensed under the MIT license (http://opensource.org/licenses/MIT).
