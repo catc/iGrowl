@@ -1,6 +1,6 @@
 bower_components/
 node_modules/
 public/githubpage/
-gh-pages/*
+gh-pages/
 npm-debug.log
 Thumbs.db
