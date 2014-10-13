@@ -1,4 +1,4 @@
-/*! iGrowl v2.0
+/*! iGrowl v3.0
 	Copyright (c) 2014 Catalin Covic 
 	https://github.com/catc 
 */
