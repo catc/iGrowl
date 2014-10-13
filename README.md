@@ -66,8 +66,8 @@ For a full list of properties and methods, demos and examples, see [iGrowl](http
 
 ### Browser support
 * Chrome & Firefox
-* IE 10+
 * Safari 4+
+* IE 10+ **or** 9+ if you don't require animations
 
 
 ## Features to come
