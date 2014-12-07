@@ -1,4 +1,4 @@
-/*! iGrowl v3.0
+/*! iGrowl v3.0.1
 	Copyright (c) 2014 Catalin Covic 
 	https://github.com/catc 
 */
@@ -81,6 +81,11 @@
 
 		// add animation class - if enabled
 		if ( options.animation ) {
+			// if animation isn't supported, ensure dismiss controls are activated
+			var noAnimFallback = setTimeout(function(){
+				controls.call(growl);
+			}, 1001);
+
 			template
 				.addClass( options.animShow )
 				.one(animStart, function(e){
@@ -88,6 +93,9 @@
 				})
 				.one(animEnd, function(e) {
 					controls.call(growl);
+
+					// cancel no-animation fallback
+					clearTimeout(noAnimFallback);
 				});
 
 		} else {
