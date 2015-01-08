@@ -1,5 +1,18 @@
 {
 	"enter" : {
+		
+		"fading_entrances": {
+			"fadeInDown": true,
+			"fadeIn": true,
+			"fadeInDownBig": true,
+			"fadeInLeft": true,
+			"fadeInLeftBig": true,
+			"fadeInRight": true,
+			"fadeInRightBig": true,
+			"fadeInUp": true,
+			"fadeInUpBig": true
+		},
+		
 		"bouncing_entrances": {
 			"bounceIn": true,
 			"bounceInDown": true,
@@ -13,19 +26,6 @@
 			"slideInLeft": true,
 			"slideInRight": true,
 			"slideInUp": true
-		},
-
-
-		"fading_entrances": {
-			"fadeIn": true,
-			"fadeInDown": true,
-			"fadeInDownBig": true,
-			"fadeInLeft": true,
-			"fadeInLeftBig": true,
-			"fadeInRight": true,
-			"fadeInRightBig": true,
-			"fadeInUp": true,
-			"fadeInUpBig": true
 		},
 
 		"flippers": {
