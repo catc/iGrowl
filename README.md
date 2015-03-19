@@ -26,22 +26,22 @@ iGrowl has 3 dependencies:
   * [Steadysets](https://dribbble.com/shots/929153-Steady-set-of-icons) by [Tommy Sähl](http://tommysahl.com/)
   * [Linecons](http://designmodo.com/linecons-free/) by [Sergey Shmidt](http://shmidt.in/)
   * You can use your own icon font - see docs for more info
-  * iGrowl also functions completely fine without any icons
+  * Icons are completely optional; iGrowl functions perfectly fine without icons
 
 All icon packs have been compiled using [Icomoon](https://icomoon.io/) app.
 
 ## Installation
 To install, grab the necessary iGrowl files from `dist`.
 ```HTML
-<-- dependencies: jQuery + animate.css --> 
+<!-- dependencies: jQuery + animate.css --> 
 <link rel="stylesheet" href="stylesheets/animate.min.css">
 <script src="javascript/jquery.min.js">
 
-<-- iGrowl CSS + JS --> 
+<!-- iGrowl CSS + JS --> 
 <link rel="stylesheet" href="stylesheets/igrowl.min.css">
 <script src="javascript/igrowl.min.js">
 
-<-- at least one of the following icon stylesheets: --> 
+<!-- at least one of the following icon stylesheets: --> 
 <link rel="stylesheet" href="stylesheets/font css/vicons.css">
 <link rel="stylesheet" href="stylesheets/font css/feather.css">
 <link rel="stylesheet" href="stylesheets/font css/steadysets.css">
