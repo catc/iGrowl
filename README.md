@@ -20,11 +20,13 @@ iGrowl has 3 dependencies:
 
 1. jQuery
 2. animate.css
-3. at least one of the 4 icon packs included - each includes its respective css and font files
+3. **Optional:** one or more of the 4 icon packs included - each includes its respective css and font files
   * [Vicons](https://dribbble.com/shots/1663443-60-Vicons-Free-Icon-Set) by [Victor Erixon](http://victorerixon.com/)
   * [Feather](http://colebemis.com/feather/) by [Cole Bemis](http://colebemis.com/)
   * [Steadysets](https://dribbble.com/shots/929153-Steady-set-of-icons) by [Tommy Sähl](http://tommysahl.com/)
   * [Linecons](http://designmodo.com/linecons-free/) by [Sergey Shmidt](http://shmidt.in/)
+  * You can use your own icon font - see docs for more info
+  * iGrowl also functions completely fine without any icons
 
 All icon packs have been compiled using [Icomoon](https://icomoon.io/) app.
 
