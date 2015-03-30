@@ -75,7 +75,7 @@ For a full list of properties and methods, demos and examples, see [iGrowl](http
 ## Features to come
 Features I plan on adding:
 * max number of notifications
-   * queue system - eg: if max number of notifications is 4, new notifications are queued until the current disappear
+   * queue system - eg: if max number of notifications are reached, new notifications are queued until the current disappear
 
 If you have any suggestions or requests, open a ticket or feel free to send me an email.
 
