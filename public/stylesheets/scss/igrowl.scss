@@ -162,6 +162,19 @@
 }
 
 .igrowl-dismiss {
+	// reset button
+	cursor: pointer;
+	-webkit-appearance: none;
+	border: none;
+	background: none;
+	outline: none;
+	color: inherit;
+	text-shadow: none;
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+
 	position: absolute;
 	font-size: 1rem;
 	padding: 4px;

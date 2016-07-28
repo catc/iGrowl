@@ -214,8 +214,8 @@
 		},
 
 		animation : 	true,
-		animShow : 		'fadeInDown',
-		animHide : 		'fadeOutUp',
+		animShow : 		'bounceIn',
+		animHide : 		'bounceOut',
 		onShow : 		null,
 		onShown : 		null,
 		onHide : 		null,

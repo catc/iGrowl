@@ -115,6 +115,13 @@
     opacity: 0.7; }
 
 .igrowl-dismiss {
+  cursor: pointer;
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  outline: none;
+  color: inherit;
+  text-shadow: none;
   position: absolute;
   font-size: 1rem;
   padding: 4px;
@@ -124,6 +131,9 @@
   transition: color 0.3s ease;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent; }
+  .igrowl-dismiss::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
   .igrowl-dismiss:before {
     font-family: 'igrowl-feather', 'igrowl-linecons', 'igrowl-steadysets', 'igrowl-vicons';
     font-size: 1.8rem !important; }
