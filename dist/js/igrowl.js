@@ -37,7 +37,7 @@
 
 
 		// image / icon
-		if ( options.image.src ) {
+		if ( options.image && options.image.src ) {
 			template.prepend('<div class="igrowl-img '+ options.image.class +'"><img src="'+ options.image.src +'"</div>');
 		} else if (options.icon) {
 			template.prepend('<div class="igrowl-icon i-'+ options.icon + '"></div>');
