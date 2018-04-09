@@ -209,3 +209,35 @@
     color: #55550A; }
   .igrowl-notice-sat .igrowl-icon {
     color: #575701; }
+
+/* custom fbm styling */
+.igrowl-fbm_style {
+  background: #fff;
+  border-radius:12px;
+  box-shadow:rgba(0, 0, 0, 0.15) 0px 3pt 12pt;
+  border-color: #e3e3e3;
+  font-size:1.6rem;
+}
+.igrowl-fbm_style .igrowl-message, .igrowl-fbm_style .igrowl-title{
+  font-size:1.6rem;
+  color: #535123;
+}
+.igrowl-fbm_style .igrowl-icon {
+  color: #635F00;
+}
+.igrowl-fbm_style .igrowl-action{
+  padding-bottom:13px;
+  padding-top:14px;
+  outline:none;
+  line-height:21px;
+  border-top:.75pt solid rgba(0, 0, 0, .1);
+  font-size:1.8rem;
+  color: rgb(0, 132, 255);
+  text-align:center;
+}
+.igrowl-fbm_style.igrowl-link > a{
+  padding:0!important;
+}
+.igrowl-fbm_style .igrowl-text{
+    padding: 8px 30px 8px 15px;
+}
