@@ -9,7 +9,7 @@
 	var animStart = 'webkitAnimationStart oanimationstart MSAnimationStart animationstart',
 		animEnd = 'webkitAnimationEnd oanimationend MSAnimationEnd animationend',
 	
-		growlTemplate = '<div class="igrowl animated" role="alert"><div class="igrowl-text"></div><button class="igrowl-dismiss i-times"></button></div>';
+		growlTemplate = '<div class="igrowl animated" role="alert"><div class="igrowl-text"></div><button class="igrowl-dismiss i-times"></button><div class="igrowl-footer"></div></div>';
 
 
 	var iGrowl = function(options){
@@ -47,8 +47,11 @@
 		if ( options.title ) template.find('.igrowl-text').prepend('<div class="igrowl-title">' + options.title + '</div>');
 		if ( options.message ) template.find('.igrowl-text').append('<div class="igrowl-message">' + options.message + '</div>');
 
+		//action
+		if ( options.action ) template.find('.igrowl-footer').append('<div class="igrowl-action">' + options.action + '</div>');
+
 		// link
-		if ( options.link ){ template.addClass('igrowl-link').children('.igrowl-icon, .igrowl-text').wrapAll('<a href="' + options.link +'" target="_' + options.target + '" />'); }
+		if ( options.link ){ template.addClass('igrowl-link').children('.igrowl-icon, .igrowl-text, .igrowl-footer').wrapAll('<a href="' + options.link +'" target="_' + options.target + '" />'); }
 
 		template.attr('alert-placement', options.placement.x + ' ' + options.placement.y );
 		return template;
